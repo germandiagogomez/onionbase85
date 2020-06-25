@@ -7,7 +7,8 @@ I found a site called "Tom's data onion" [[https://www.tomdalling.com/toms-data-
 the payload presented in the website myself by doing some coding.
 
 That way I could train some Modern C++ skills + tooling and see how
-efficiently it works. 
+efficiently it works. I gave it the name onionbase85 as a tribute to that
+website.
 
 So this project includes (only) a Base85 decoder library that is able to
 decode the payload shown in Tom's data onion website. And only that.
