@@ -1,0 +1,13 @@
+#ifndef _BENCHMARK_CONFIG_HPP_
+#define _BENCHMARK_CONFIG_HPP_
+
+#include <string_view>
+
+namespace onion::benchmarkconfig {
+
+constexpr std::string_view MESON_BENCHMARK_DIR = "@MESON_BENCHMARK_DIR@";
+
+
+}
+
+#endif
