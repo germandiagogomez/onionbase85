@@ -1,0 +1,31 @@
+#+TITLE: Readme
+
+* Project motivation
+
+
+I found a site called "Tom's data onion" [[https://www.tomdalling.com/toms-data-onion/][here]]. I was curious to decode
+the payload presented in the website myself by doing some coding.
+
+So this project includes (only) a Base85 decoder library that is able to
+decode the payload shown in Tom's data onion website. And only that.
+
+In the first place I wanted to check how efficient is nowadays a
+modern C++ toolchain compared with other languages:
+
+  1. Use a sane build system
+  2. Add some dependencies via package management
+  3. Use some TDD to code the decoder
+  4. Add a benchmark for the decoder
+
+The project is using C++2a (through gcc 9 and Linux). There were some missing
+pieces I wanted to use from C++20 so I used alternatives such as microsoft-gsl
+via meson wrap packages. I also used Catch2 for the tests.
+
+All in all, it took some 5-6 hours to do all the work together in a couple of
+days.
+
+I am quite happy with the result compared to how C++ was one decade ago.
+No wonder that much progress has been done.
+
+* How to use this project
+# TODO
