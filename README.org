@@ -6,6 +6,9 @@
 I found a site called "Tom's data onion" [[https://www.tomdalling.com/toms-data-onion/][here]]. I was curious to decode
 the payload presented in the website myself by doing some coding.
 
+That way I could train some Modern C++ skills + tooling and see how
+efficiently it works. 
+
 So this project includes (only) a Base85 decoder library that is able to
 decode the payload shown in Tom's data onion website. And only that.
 
@@ -17,7 +20,9 @@ modern C++ toolchain compared with other languages:
   3. Use some TDD to code the decoder
   4. Add a benchmark for the decoder
 
-The project is using C++2a (through gcc 9 and Linux). There were some missing
+The project is using C++2a (through gcc 9 and Linux is how I did it, but
+this should work in Linux and Mac equally well, it is all standard C++ + some
+dependencies). There were some missing
 pieces I wanted to use from C++20 so I used alternatives such as microsoft-gsl
 via meson wrap packages. I also used Catch2 for the tests.
 
