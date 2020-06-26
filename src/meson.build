@@ -1,4 +1,3 @@
-catch2_dep = dependency('catch2', fallback : ['catch2', 'catch2_dep'])
 microsoft_gsl_dep = dependency('microsoft-gsl', fallback : ['microsoft-gsl', 'microsoft_gsl_dep'])
 
 

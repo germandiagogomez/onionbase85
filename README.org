@@ -34,4 +34,68 @@ I am quite happy with the result compared to how C++ was one decade ago.
 No wonder that much progress has been done.
 
 * How to use this project
-# TODO
+
+** Dependencies
+
+This project uses the [[https://mesonbuild.com/][Meson Build System]]. My recommendation is that you install it
+via python pip.
+
+You will also need [[https://ninja-build.org/][Ninja build system]] if you use ninja as the backend (the default).
+
+
+The project has been coded and tested under Ubuntu Linux but it should work reliably
+in Mac OS and *on Windows if you use it as a static library (no dllexport implemented as of now)*.
+
+** Building the project
+
+This project is a standard Meson project. All commands that you will see below must be executed
+from the root directory. There are more ways, but I will keep it like this for the sake of simplicity.
+
+1. Clone the github project.
+
+#+BEGIN_src sh
+git clone https://github.com/germandiagogomez/onionbase85.git
+#+END_src
+
+2. Invoke meson to build the project
+
+#+BEGIN_src sh
+meson -Ddefault_library=static build
+#+END_src
+
+The output of the project is a library, by default a shared library. Not terribly useful to test it or run it.
+
+So take a look at the options:
+
+#+BEGIN_src sh
+meson configure build
+#+END_src
+
+You will see at the end 2 options: build-tests and build-benchmarks.
+
+So use those:
+
+#+BEGIN_src sh
+meson configure -Dbuild-benchmarks=true -Dbuild-tests=true build
+#+END_src
+
+You can do all of the above meson configuration in a single command via =meson -Dbuild-benchmarks=true -Dbuild-tests=true -Ddefault_library=static build=
+if you wish so. 
+
+** Running the tests
+
+#+BEGIN_src sh
+meson test -v
+#+END_src
+
+#+BEGIN_src sh
+ONION_DEBUG_PAYLOAD=1 meson test -v --benchmark
+#+END_src
+
+** Running the benchmarks
+
+#+BEGIN_src sh
+meson test -v --benchmark
+#+END_src
+
+If you want to see the output of the test payload:
