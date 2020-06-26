@@ -94,6 +94,7 @@ meson -Dbuild-benchmarks=true -Dbuild-tests=true -Ddefault_library=static --back
 meson test -v
 #+END_src
 
+If you want to see the output of the test payload:
 #+BEGIN_src sh
 ONION_DEBUG_PAYLOAD=1 meson test -v --benchmark
 #+END_src
@@ -104,4 +105,6 @@ ONION_DEBUG_PAYLOAD=1 meson test -v --benchmark
 meson test -v --benchmark
 #+END_src
 
-If you want to see the output of the test payload:
+** Related articles
+
+- [[https://medium.com/@germandiagogomez/testing-a-modern-c-workflow-by-coding-a-base85-decoder-from-scratch-c6cde64984a9][Testing a Modern C++ workflow by coding a base85 decoder from scratch]]
