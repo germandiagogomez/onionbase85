@@ -80,7 +80,13 @@ meson configure -Dbuild-benchmarks=true -Dbuild-tests=true build
 #+END_src
 
 You can do all of the above meson configuration in a single command via =meson -Dbuild-benchmarks=true -Dbuild-tests=true -Ddefault_library=static build=
-if you wish so. 
+if you wish so.
+
+*** Using the visual studio backend to open with Visual studio (Windows)
+
+#+BEGIN_src sh
+meson -Dbuild-benchmarks=true -Dbuild-tests=true -Ddefault_library=static --backend=vs2019 build
+#+END_src
 
 ** Running the tests
 
