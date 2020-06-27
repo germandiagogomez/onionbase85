@@ -96,7 +96,7 @@ meson test -v
 
 If you want to see the output of the test payload:
 #+BEGIN_src sh
-ONION_DEBUG_PAYLOAD=1 meson test -v --benchmark
+ONION_DEBUG_PAYLOAD=1 meson test -v
 #+END_src
 
 ** Running the benchmarks
